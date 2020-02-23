@@ -173,7 +173,7 @@ function fetch_binary {
   fi
 
   retry \
-    "curl -o '$DOWNLOAD_PACKAGE_PATH' '$download_url' --location --silent --fail --show-error" \
+    "aws s3 cp '$download_url' '$DOWNLOAD_PACKAGE_PATH'" \
     "Downloading Vault to $DOWNLOAD_PACKAGE_PATH"
 }
 

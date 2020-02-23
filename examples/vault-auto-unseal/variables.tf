@@ -65,13 +65,13 @@ variable "consul_cluster_size" {
 variable "vault_instance_type" {
   description = "The type of EC2 Instance to run in the Vault ASG"
   type        = string
-  default     = "t2.micro"
+  default     = "t2.medium"
 }
 
 variable "consul_instance_type" {
   description = "The type of EC2 Instance to run in the Consul ASG"
   type        = string
-  default     = "t2.nano"
+  default     = "t2.medium"
 }
 
 variable "consul_cluster_tag_key" {
@@ -85,4 +85,3 @@ variable "vpc_id" {
   type        = string
   default     = null
 }
-
